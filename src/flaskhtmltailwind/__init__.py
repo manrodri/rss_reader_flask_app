@@ -18,7 +18,7 @@ def create_app():
     
     @app.route('/feed/')
     def render_feed():
-        feed_url = feed['herf']
+        feed_url = feed['href']
         parsed_feed = feedparser.parse(feed_url)
         
         for entry in parsed_feed.entries:
